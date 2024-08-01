@@ -63,7 +63,7 @@ body {
 
 .btn-primary.btn-ticket {
     background-color: #cb3a3a;
-    border-color:  #FFFF00;
+    border-color: #FFFF00;
     color: #ffffff;
     font-weight: bold;
     text-transform: uppercase;
@@ -76,7 +76,7 @@ body {
 
 .btn-primary.btn-ticket:hover {
     background-color: #cb1d1d;
-    border-color:  #FFFF00;
+    border-color: #FFFF00;
     transform: translateY(-2px);
     box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
@@ -124,9 +124,41 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Новые стили для навигационного бара */
+@media (max-width: 991px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1030;
+    }
+
+    body {
+        padding-top: 56px; /* Высота navbar */
+    }
+
+    .navbar-collapse {
+        position: fixed;
+        top: 56px; /* Высота navbar */
+        left: -100%;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        width: 75%;
+        height: 100%;
+        background-color: #343a40;
+        transition: left 0.3s ease-in-out;
+    }
+
+    .navbar-collapse.show {
+        left: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-section, .carousel-item {
-        height: 100vh;
+        height: 90vh;
         max-height: none;
     }
     
