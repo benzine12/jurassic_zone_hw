@@ -124,7 +124,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Новые стили для навигационного бара */
 @media (max-width: 991px) {
     .navbar {
         position: fixed;
@@ -158,7 +157,7 @@ body {
 
 @media (max-width: 768px) {
     .hero-section, .carousel-item {
-        height: 90vh;
+        height: 85vh;
         max-height: none;
     }
     
