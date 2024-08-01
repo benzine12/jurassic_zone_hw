@@ -32,43 +32,58 @@ body {
     overflow: hidden;
 }
 
-.hero-image {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.carousel-item, .carousel-inner {
     height: 100%;
+}
+
+.carousel-item img {
     object-fit: cover;
-    transition: opacity 1s ease-in-out;
+    height: 100%;
+    width: 100%;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.6);
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding: 2rem;
-    border-radius: 10px;
-    max-width: 600px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    z-index: 10;
 }
 
-.hero-content h1 {
+.carousel-caption h1 {
     font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    text-shadow: .1rem .1rem .5rem rgba(0,0,0,.8);
     margin-bottom: 1rem;
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
+.btn-primary.btn-ticket {
+    background-color: #cb3a3a;
+    border-color:  #FFFF00;
+    color: #ffffff;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 30px;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
 }
 
-.btn-primary {
-    background-color: #007bff;
-    border-color: #007bff;
+.btn-primary.btn-ticket:hover {
+    background-color: #cb1d1d;
+    border-color:  #FFFF00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
 
-.btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+.btn-primary.btn-ticket:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .feature-image {
@@ -109,102 +124,14 @@ body {
     margin-bottom: 2rem;
 }
 
-.carousel-item {
-    height: 70vh;
-    min-height: 300px;
-    max-height: 600px;
-    background: no-repeat center center scroll;
-    background-size: cover;
-}
-
-.carousel-item img {
-    object-fit: cover;
-    height: 100%;
-    width: 100%;
-}
-
-.carousel-caption {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 10%;
-}
-
-.carousel-caption h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    text-shadow: .1rem .1rem .5rem rgba(0,0,0,.8);
-}
-
-.carousel-caption p {
-    font-size: 1.25rem;
-    font-weight: 300;
-    text-shadow: .1rem .1rem .5rem rgba(0,0,0,.8);
-}
-
-@media (max-width: 768px) {
-    .hero-section, .carousel-item {
-        height: 50vh;
-    }
-    
-    .carousel-caption h1 {
-        font-size: 1.5rem;
-    }
-    
-    .carousel-caption p {
-        font-size: 1rem;
-    }
-    
-    .carousel-caption .btn {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-    }
-}
-/* Добавьте эти стили в конец вашего файла styles.css */
-
-.carousel-caption {
-    bottom: 0;
-    left: 0;
-    right: 0;
-    padding: 2rem;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
-}
-
-.carousel-caption h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: .1rem;
-    text-shadow: .1rem .1rem .5rem rgba(0,0,0,.8);
-    margin-bottom: 1rem;
-}
-
-.carousel-caption .btn {
-    font-size: 1.25rem;
-    padding: 0.75rem 1.5rem;
-}
-
 @media (max-width: 768px) {
     .hero-section, .carousel-item {
         height: 100vh;
-    }
-    
-    .carousel-inner {
-        height: 100%;
-    }
-    
-    .carousel-item img {
-        height: 100%;
-        object-fit: cover;
+        max-height: none;
     }
     
     .carousel-caption {
-        top: auto;
-        bottom: 0;
         padding: 1rem;
-        background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
     }
     
     .carousel-caption h1 {
@@ -212,9 +139,9 @@ body {
         margin-bottom: 1rem;
     }
     
-    .carousel-caption .btn {
-        font-size: 1rem;
-        padding: 0.5rem 1rem;
+    .btn-primary.btn-ticket {
         width: 100%;
+        padding: 15px 30px;
+        font-size: 1.1rem;
     }
 }
